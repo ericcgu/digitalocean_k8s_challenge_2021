@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fastapi-helloworld 
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: k8s/argocd
+    repoURL: https://github.com/ericcgu/digitalocean_k8s_challenge_2021
+    targetRevision: HEAD
+  syncPolicy: {}
