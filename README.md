@@ -90,4 +90,13 @@ I grabbed the credentials from k8s and confirmed successful setup up ArgoCD
 
 ## ArgoCD GitOps CRD
 
+I created an Argo CRD to point to my applications deployment yaml files:
 
+![image](https://user-images.githubusercontent.com/4943759/146977986-6bd74812-01ee-4d71-b8b3-3679dfb8dc8f.png)
+
+I committed the Argo CRD yaml and navigated to the Argo UI to confirm:
+
+![image](https://user-images.githubusercontent.com/4943759/146978106-ba6a279d-f09e-4949-9fb8-9ced2a930976.png)
+
+
+I created an Argo CRD to point to my applications deployment yaml files:
