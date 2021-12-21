@@ -64,7 +64,7 @@ I replaced my test from localhost to the External IP created by DO Load Balancer
 ![image](https://user-images.githubusercontent.com/4943759/146969316-2b116aea-8ecc-41c0-a74d-abff44eac4ca.png)
 
 
-## ArgoCD GitOps
+## ArgoCD GitOps Foundation and Install
 
 I installed ArgoCD into DO K8s. 
 
@@ -83,4 +83,11 @@ I patched the argocd-server service to type Load Balancer to expose ArgoCD.
 I navigated to the external IP and tested connectivity to argocd
 
 ![image](https://user-images.githubusercontent.com/4943759/146974462-cc0577c9-629c-4409-a175-298702c35e07.png)
+
+I grabbed the credentials from k8s and confirmed successful setup up ArgoCD
+
+![image](https://user-images.githubusercontent.com/4943759/146976683-5f23df1f-2b66-4b9f-a961-947eb5ce7e14.png)
+
+## ArgoCD GitOps CRD
+
 
