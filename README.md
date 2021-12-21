@@ -24,15 +24,34 @@ Commands:
 
 ## Dockerhub Container Registry and Gitlab Action Pipeline
 
-I went to DockerHub to create an authentication token. I added the token to the secrets section and wrote a Gitlab Action YAML file to automate the build and push of this image on every push to master branch.
+I went to DockerHub to create an authentication token. I added the token to the secrets section and wrote a Gitlab Action YAML file to automate the build and push of this image on every push to master branch. Under Gitlab Actions, I verified my Gitlab Action Pipeline was succeeding and that the images were pushed to Docker Container Registry.
 
 ![image](https://user-images.githubusercontent.com/4943759/146968616-851ec732-320d-4c47-b05e-f0e4844e4a66.png)
 
+![image](https://user-images.githubusercontent.com/4943759/146968888-3b093499-24b8-4faa-af40-afab0ed4b708.png)
 
+![image](https://user-images.githubusercontent.com/4943759/146969065-3370fb73-1885-439a-9253-274df5e18575.png)
+
+## Digital Ocean and K8s Setup
+
+I installed the DO command line tool and created a K8s cluster via the UI.  I added the credentials to the K8s cluster to my local machine. I created a deployment as well as a Load Balancer Service to expose my API endpoint to the Internet
 
 ``` brew install doctl```
 
 ``` doctl version```
+
+![image](https://user-images.githubusercontent.com/4943759/146969430-6e7d1435-e1a6-48ae-a144-30f5ed51d366.png)
+
+![image](https://user-images.githubusercontent.com/4943759/146969462-01fc44fe-3fe7-4bd8-bccd-db84e201e914.png)
+
+``` kubectl apply -f ./k8s/fastapi-deployment.yaml ```
+
+``` kubectl apply -f ./k8s/fastapi-svc.yaml ```
+
+```curl -v http://165.227.250.126```
+
+![image](https://user-images.githubusercontent.com/4943759/146969316-2b116aea-8ecc-41c0-a74d-abff44eac4ca.png)
+
 
 ## 1. Installing Digital Ocean Command Line Tool
 
