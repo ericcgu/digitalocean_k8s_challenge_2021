@@ -18,7 +18,9 @@ Commands:
 ![image](https://user-images.githubusercontent.com/4943759/146967761-58e55d10-09ee-40f3-8f99-855712bb49c0.png)
 ![image](https://user-images.githubusercontent.com/4943759/146967829-bc93208d-1268-4726-93b7-3a35fa8645f7.png)
 
-```curl -v http://165.227.250.126```
+I tested the API via curl tool to localhost to ensure my API was working.
+
+```curl -v http://localhost```
 
 ![image](https://user-images.githubusercontent.com/4943759/146967869-f4240397-5931-4181-bef7-8748db3a96f3.png)
 
@@ -50,18 +52,16 @@ I installed the DO command line tool and created a K8s cluster via the UI.  I ad
 
 ```curl -v http://165.227.250.126```
 
-![image](https://user-images.githubusercontent.com/4943759/146969316-2b116aea-8ecc-41c0-a74d-abff44eac4ca.png)
-
-
-## 1. Installing Digital Ocean Command Line Tool
-
-``` kubectl apply -f ./k8s/fastapi-deployment.yaml ```
-
-``` kubectl apply -f ./k8s/fastapi-svc.yaml ```
+I replaced my test from localhost to the External IP created by DO Load Balancer Service
 
 ```curl -v http://165.227.250.126```
 
-## 1. Installing Digital Ocean Command Line Tool
+![image](https://user-images.githubusercontent.com/4943759/146969874-97db6031-1ef1-4cbe-9d6c-74d343bb1608.png)
+
+![image](https://user-images.githubusercontent.com/4943759/146969316-2b116aea-8ecc-41c0-a74d-abff44eac4ca.png)
+
+
+## ArgoCD GitOps
 
 ``` kubectl create namespace argocd ```
 ``` kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ```
