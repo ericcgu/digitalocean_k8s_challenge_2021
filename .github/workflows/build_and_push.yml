@@ -39,4 +39,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ericcgu/fastapi_helloworld:latest
+          tags: ericcgu/fastapi_helloworld:1.0.0
