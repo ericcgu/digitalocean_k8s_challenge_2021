@@ -96,7 +96,7 @@ I created an Argo CRD to point to my applications deployment yaml files:
 
 I committed the Argo CRD yaml and navigated to the Argo UI to confirm:
 
-![image](https://user-images.githubusercontent.com/4943759/146978106-ba6a279d-f09e-4949-9fb8-9ced2a930976.png)
+![image](https://user-images.githubusercontent.com/4943759/146978257-79f57365-f301-4854-884b-60e565244ca1.png)
 
+## Testing the GitOps Pipeline: 
 
-I created an Argo CRD to point to my applications deployment yaml files:
