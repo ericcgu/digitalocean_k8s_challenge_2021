@@ -81,6 +81,9 @@ I patched the argocd-server service to type Load Balancer to expose ArgoCD.
 
 ```kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'```
 
+![image](https://user-images.githubusercontent.com/4943759/146982779-e53d08fc-d2d6-40ce-aa6a-2de0a6b45cc5.png)
+
+
 I navigated to the external IP and tested connectivity to argocd
 
 ![image](https://user-images.githubusercontent.com/4943759/146974462-cc0577c9-629c-4409-a175-298702c35e07.png)
