@@ -99,6 +99,12 @@ I committed the Argo CRD yaml and navigated to the Argo UI to confirm:
 
 ![image](https://user-images.githubusercontent.com/4943759/146978257-79f57365-f301-4854-884b-60e565244ca1.png)
 
+## ArgoCD GitOps CRD
+
+I incremented the image version of the application and resynced ArgoCD via the UI
+
+![image](https://user-images.githubusercontent.com/4943759/146980697-e87d5653-1645-46e6-a5bf-659c4b5de326.png)
+
 ## App: 
 
 http://165.227.250.126/docs
