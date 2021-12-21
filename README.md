@@ -1,6 +1,6 @@
 # digitalocean_k8s_challenge_2021
 
-## Using Gitlab Actions and ArgoCD to Perform a GitOps Style Continuous Release Process: FastAPI Microservice to Digital Ocean Kubernetes
+## Using Gitlab Actions and ArgoCD to Perform a GitOps Style Continuous Release Process & Delivery Pipeline: FastAPI Microservice to Digital Ocean Kubernetes
 
 ## Installing Digital Ocean Command Line Tool
 
