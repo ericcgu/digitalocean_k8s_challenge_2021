@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: ericcgu/fastapi_helloworld:latest
+        image: ericcgu/fastapi_helloworld:1.0.0
         ports:
         - containerPort: 80
