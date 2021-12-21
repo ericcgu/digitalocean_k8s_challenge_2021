@@ -103,6 +103,8 @@ I committed the Argo CRD yaml and navigated to the Argo UI to confirm:
 
 I incremented the image version of the application and resynced ArgoCD via the UI
 
+![image](https://user-images.githubusercontent.com/4943759/146981028-9e317868-efb8-418a-8263-022af5d91129.png)
+
 ![image](https://user-images.githubusercontent.com/4943759/146980697-e87d5653-1645-46e6-a5bf-659c4b5de326.png)
 
 ## App: 
