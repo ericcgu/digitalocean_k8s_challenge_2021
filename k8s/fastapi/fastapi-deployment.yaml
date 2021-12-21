@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-dep
+  labels:
+    app: fastapi-helloworld
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fastapi-helloworld
+  template:
+    metadata:
+      labels:
+        app: fastapi-helloworld
+    spec:
+      containers:
+      - name: fastapi
+        image: ericcgu/fastapi_helloworld:latest
+        ports:
+        - containerPort: 80
