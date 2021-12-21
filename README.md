@@ -11,6 +11,7 @@ I created a FastAPI API Project. I created the Dockerfile and deployed it on loc
 References: https://fastapi.tiangolo.com/deployment/docker/
 
 Commands: 
+
 ```docker build -t fastapi .```
 
 ```docker run -d --name fastapi_helloworld -p 80:80 fastapi```
@@ -98,5 +99,6 @@ I committed the Argo CRD yaml and navigated to the Argo UI to confirm:
 
 ![image](https://user-images.githubusercontent.com/4943759/146978257-79f57365-f301-4854-884b-60e565244ca1.png)
 
-## Testing the GitOps Pipeline: 
+## App: 
 
+http://165.227.250.126/docs
