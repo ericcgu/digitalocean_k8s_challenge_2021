@@ -36,7 +36,11 @@ I went to DockerHub to create an authentication token. I added the token to the 
 
 ## Digital Ocean and K8s Setup
 
-I installed the DO command line tool and created a K8s cluster via the UI.  I added the credentials to the K8s cluster to my local machine. I created a deployment as well as a Load Balancer Service to expose my API endpoint to the Internet
+I installed the DO command line tool and created a K8s cluster via the UI.  I added the credentials to the K8s cluster to my local machine. 
+
+I created a deployment as well as a Load Balancer Service to expose my API endpoint to the Ingress. 
+
+Typically I would use Traefik but this is out of scope.
 
 ``` brew install doctl```
 
@@ -50,9 +54,8 @@ I installed the DO command line tool and created a K8s cluster via the UI.  I ad
 
 ``` kubectl apply -f ./k8s/fastapi-svc.yaml ```
 
-```curl -v http://165.227.250.126```
 
-I replaced my test from localhost to the External IP created by DO Load Balancer Service
+I replaced my test from localhost to the External IP created by DO Load Balancer Service.
 
 ```curl -v http://165.227.250.126```
 
@@ -63,6 +66,19 @@ I replaced my test from localhost to the External IP created by DO Load Balancer
 
 ## ArgoCD GitOps
 
+I installed ArgoCD into DO K8s. 
+
+References: https://argo-cd.readthedocs.io/en/stable/getting_started/
+
 ``` kubectl create namespace argocd ```
 ``` kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ```
 ``` kubectl apply -f ./k8s/argocd/argocd-svc.yaml -n argocd ```
+
+I patched the argocd-server service to type Load Balancer to expose ArgoCD.
+
+```kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'```
+
+I navigated to the external IP and tested connectivity to argocd
+
+![image](https://user-images.githubusercontent.com/4943759/146974462-cc0577c9-629c-4409-a175-298702c35e07.png)
+
