@@ -24,6 +24,12 @@ Commands:
 
 ## Dockerhub Container Registry and Gitlab Action Pipeline
 
+I went to DockerHub to create an authentication token. I added the token to the secrets section and wrote a Gitlab Action YAML file to automate the build and push of this image on every push to master branch.
+
+![image](https://user-images.githubusercontent.com/4943759/146968616-851ec732-320d-4c47-b05e-f0e4844e4a66.png)
+
+
+
 ``` brew install doctl```
 
 ``` doctl version```
