@@ -71,7 +71,9 @@ I installed ArgoCD into DO K8s.
 References: https://argo-cd.readthedocs.io/en/stable/getting_started/
 
 ``` kubectl create namespace argocd ```
+
 ``` kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ```
+
 ``` kubectl apply -f ./k8s/argocd/argocd-svc.yaml -n argocd ```
 
 I patched the argocd-server service to type Load Balancer to expose ArgoCD.
