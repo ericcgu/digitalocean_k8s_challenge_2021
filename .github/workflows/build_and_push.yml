@@ -40,4 +40,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ericcgu/fastapi_helloworld:${GITHUB_REF#refs/tags/}
+          tags: ericcgu/fastapi_helloworld:v1.0.1
