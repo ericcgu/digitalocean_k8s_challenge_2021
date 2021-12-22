@@ -4,9 +4,10 @@ name: "Package with Docker"
 ## Set the trigger policy.
 ## In this case, the workflow is execute on a `push` event,
 ## or when a new commit is pushed to the repository
-on: 
+on:
   push:
-    branches: [ main ]
+    tags:
+    - '*'
 ## List the steps to be executed by the workflow
 jobs:
   ## Set the name of the job
@@ -39,4 +40,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ericcgu/fastapi_helloworld:1.0.0
+          tags: ericcgu/fastapi_helloworld:${GITHUB_REF#refs/tags/}
